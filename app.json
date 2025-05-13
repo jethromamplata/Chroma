@@ -1,28 +1,36 @@
 {
   "expo": {
-    "name": "my-app",
-    "slug": "my-app",
+    "name": "Chroma",
+    "slug": "chroma",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/icons/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/icons/splash-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Chroma uses the camera to capture undertone photos."
+      }
     },
     "android": {
+      "permissions": ["CAMERA"],
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/icons/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/icons/favicon.png"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "fonts": {
+      "DancingScript": "./assets/fonts/DancingScript-Regular.ttf"
     }
   }
 }
